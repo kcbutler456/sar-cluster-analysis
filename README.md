@@ -19,7 +19,7 @@ Financial Crimes Enforcement Network: https://www.fincen.gov/reports/sar-stats
 
 ## Data Cleaning and Prepartion 
 
-## EDA
+## EDA and Dimensionality Reduction
 
 ## Optimial K Cluster Selection
 

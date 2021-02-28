@@ -28,7 +28,7 @@ Six files were generated for each suspicious activity type in depository institu
 ## Data Cleaning and Prepartion 
 
 - Remove aggrigated columns and Guam territory
-- 
+```msb <- msb[msb$State != "[Total]"&msb$State!="Guam",] #remove aggregated rows```
 
 ## EDA and Feature Selection
 

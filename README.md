@@ -27,8 +27,14 @@ Six files were generated for each suspicious activity type in depository institu
 
 ## Data Cleaning and Prepartion 
 
-- Remove aggrigated columns and Guam territory
+- Remove irrelevant, reaggregated columns, and Guam territory
 ```html
+msb$Year.Month <- NULL
+msb$State <- as.factor(msb$State)
+msb$Industry <- NULL
+msb$Suspicious.Activity <- NULL
+msb$Product <- NULL
+msb$Type <- as.factor(msb$Type)
 msb <- msb[msb$State != "[Total]"&msb$State!="Guam",]
 ```
 - Aggregate count to suspicious activity type and state, and calculate per capita statistic

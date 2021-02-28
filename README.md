@@ -1,6 +1,6 @@
 # Suspicious Activity Report (SAR) Cluster Analysis
 
-*hook for storytelling - preventing money laudering??
+*hook for storytelling - preventing money laudering??*
 
 Suspicious Activity Reports (SAR) are reports which financial instructions are required to file, according to the Bank Secrecy Act of 1970, whenever they identify suspicious or potentially suspicious activity by an account holder. The purpose of these reports is to identify individuals or organizations involved in money laundering, fraud, terrorist funding operations or any other suspicious activity out of the ordinary (Kenton, 2019). 
 
@@ -22,7 +22,7 @@ This is an unsupervised machine learning task which will utilize k-means and hie
 
 Six files were generated for each suspicious activity type in depository institutions for deposit accounts in 2020; Cyber event, gaming activities, identification documnetation, money laundering, mortgage fraud, and structuring. 1,707,991 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the unioned supsicious activity file to generate per capita statistics. 
 
-![image](https://user-images.githubusercontent.com/55027593/109431797-ead4c000-79cd-11eb-833f-97068b4e062c.png)
+![image](https://user-images.githubusercontent.com/55027593/109431922-79494180-79ce-11eb-8085-98ff18ac6aff.png)
 
 
 ## Data Cleaning and Prepartion 

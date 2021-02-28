@@ -1,10 +1,12 @@
 # Suspicious Activity Report (SAR) Cluster Analysis
 
+*hook for storytelling - preventing money laudering??
+
 Suspicious Activity Reports (SAR) are reports which financial instructions are required to file, according to the Bank Secrecy Act of 1970, whenever they identify suspicious or potentially suspicious activity by an account holder. The purpose of these reports is to identify individuals or organizations involved in money laundering, fraud, terrorist funding operations or any other suspicious activity out of the ordinary (Kenton, 2019). 
 
 This project seeks to identify natural clusters in the public SAR filing data located on the Financial Crimes Enforcement Network (FinCEN) government website. This data includes aggregated totals of SARs filed by month, year, industry type, suspicious activity, state, instrument type, relationship, and regulator. As a result of the project, I'm hoping to identify specific groups or patterns in the data that highlight not only interesting criminal behavior but also potentially identify interesting SAR filing behavior. 
 
-This is an unsupervised machine learning task which will utilize k-means and hierarchical clustering algorithms and compare the results. Suspicious activity categories including cyber event, gaming activities, identification documentation, money laundering, mortgage fraud, and structuring will be used to cluster states across the nation (excluding territories). Due to the sheer volume of the data and in an effort to maximize insight, this analysis will be limited to SAR activity filed in depository institutions and their deposit accounts in 2020. Therefore, the research question breaks down to, "what states exhibit similar suspicious activity for depository institutions in deposit accounts for 2020?".
+This is an unsupervised machine learning task which will utilize k-means and hierarchical clustering algorithms and compare the results. Suspicious activity categories including cyber event, gaming activities, identification documentation, money laundering, mortgage fraud, and structuring will be used to cluster states across the nation (excluding territories). Due to the volume of the data and in an effort to maximize insight, this analysis will be limited to SAR activity filed in depository institutions and their deposit accounts in 2020. Therefore, the research question breaks down to, "what states exhibit similar suspicious activity for depository institutions in deposit accounts for 2020?".
 
 ## Tools and Resources
 
@@ -18,11 +20,14 @@ This is an unsupervised machine learning task which will utilize k-means and hie
 
 ## Data Collection
 
-Financial Crimes Enforcement Network: https://www.fincen.gov/reports/sar-stats
+Six files were generated for each suspicious activity type in depository institutions for deposit accounts in 2020; Cyber event, gaming activities, identification documnetation, money laundering, mortgage fraud, and structuring. 1,707,991 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the unioned supsicious activity file to generate per capita statistics. 
+
+![image](https://user-images.githubusercontent.com/55027593/109431797-ead4c000-79cd-11eb-833f-97068b4e062c.png)
+
 
 ## Data Cleaning and Prepartion 
 
-## EDA and Dimensionality Reduction
+## EDA and Feature Selection
 
 ## Optimial K Cluster Selection
 

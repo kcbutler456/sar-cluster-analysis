@@ -58,19 +58,72 @@ sar <- data.frame(sar)
 Insurance 
 
 ```html
-cor(sar[2:7]) 
+cor(sar[2:8]) 
 ```
 
-![image](https://user-images.githubusercontent.com/55027593/109433405-caa8ff00-79d5-11eb-85dd-6184c297b47b.png)
-
+![image](https://user-images.githubusercontent.com/55027593/109433930-676c9c00-79d8-11eb-8dd2-1afe6ad9437e.png)
 
 ## Optimial K Cluster Selection
 
+```html
+fviz_nbclust(sar[2:8], kmeans, method = "wss") +
+  geom_vline(xintercept = 3, linetype = 2)+
+  labs(subtitle = "Elbow method") #3 clusters
+```
+![image](https://user-images.githubusercontent.com/55027593/109433959-8e2ad280-79d8-11eb-926c-f55a7d74d90f.png)
+
 ## Clustering 
 
+Compare 2 and 3 clusters
+
+```html
+km2 <- kmeans(sar[2:8], 2, nstart = 25)
+print(km2)
+fviz_cluster(km2, data = sar[2:8],
+             geom = "point",
+             ellipse.type = "convex", 
+             ggtheme = theme_bw())
+```
+![image](https://user-images.githubusercontent.com/55027593/109433995-c16d6180-79d8-11eb-9792-307ba873f337.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109433980-b1558200-79d8-11eb-86a5-c8168d9bec02.png)
+
+
+```html
+km3 <- kmeans(sar[2:8], 3, nstart = 25)
+print(km3)
+fviz_cluster(km3, data = sar[2:8],
+             geom = "point",
+             ellipse.type = "convex", 
+             ggtheme = theme_bw())
+```
+![image](https://user-images.githubusercontent.com/55027593/109434012-cf22e700-79d8-11eb-8efd-18ccbb9e6569.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109434019-d77b2200-79d8-11eb-9e08-c67750b17917.png)
+
+
+##Evaluate goodness of clusters
+
+
+```html
+sil <- silhouette(km2$cluster, dist(sar[2:8]))
+fviz_silhouette(sil)
+
+```
+![image](https://user-images.githubusercontent.com/55027593/109434062-02fe0c80-79d9-11eb-96fa-7ebd79159321.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109434066-06919380-79d9-11eb-9148-2bb1abb3050b.png)
+
+```html
+sil <- silhouette(km3$cluster, dist(sar[2:8]))
+fviz_silhouette(sil)
+```
+![image](https://user-images.githubusercontent.com/55027593/109434086-1e691780-79d9-11eb-9861-631973f6090d.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109434076-0f826500-79d9-11eb-92b2-b66aa49e72b5.png)
+
+
 ## Results and Conclusion
-
-
 ## References
 
 - Kenton, W. (2020, September 09). Suspicious activity report (sar) definition. Retrieved February 28, 2021, from https://www.investopedia.com/terms/s/suspicious-activity-report.asp

@@ -9,11 +9,12 @@ This is an unsupervised machine learning task which will utilize k-means and hie
 ## Tools and Resources
 
 - R
-- Tableau
-
-- K-Means Clustering in R: Algorithm and Practical Examples: https://www.datanovia.com/en/lessons/k-means-clustering-in-r-algorith-and-practical-examples/
-- Determining The Optimal Number Of Clusters: 3 Must Know Methods: http://www.sthda.com/english/articles/29-cluster-validation-essentials/96-determiningthe-optimal-number-of-clusters-3-must-know-methods/
-
+- Tableau for EDA and presenting results
+- Suspicious Activity Report (SAR) data (SAR stats, n.d.)
+- United States Population Census data (Bureau, U., 2019)
+- K-Means Clustering in R: Algorithm and Practical Examples (Rashmi, 2020)
+- Determining The Optimal Number Of Clusters: 3 Must Know Methods (Kassambara et al., 2017)
+- Evaluating goodness of clustering for unsupervised learning case (Khandelwal, 2020)
 
 ## Data Collection
 
@@ -30,7 +31,11 @@ Financial Crimes Enforcement Network: https://www.fincen.gov/reports/sar-stats
 ## Results and Conclusion
 
 
-##References
+## References
 
 - Kenton, W. (2020, September 09). Suspicious activity report (sar) definition. Retrieved February 28, 2021, from https://www.investopedia.com/terms/s/suspicious-activity-report.asp
-- 
+- Rashmi, Kassambara 06 May 2020 The demo data used in this tutorial is available in the default installation of R. Juste type data(“USArrests”) Reply, &amp; Kassambara. (2018, October 21). K-Means clustering in R: Algorithm and practical examples. Retrieved February 28, 2021, from https://www.datanovia.com/en/lessons/k-means-clustering-in-r-algorith-and-practical-examples/
+- Kassambara, Visitor, Kassambara, Visitor_Luigi, Fdtd, &amp; Visitor_Ann. (2017, September 07). Determining the optimal number of clusters: 3 must know methods. Retrieved February 28, 2021, from http://www.sthda.com/english/articles/29-cluster-validation-essentials/96-determiningthe-optimal-number-of-clusters-3-must-know-methods/
+- SAR stats. (n.d.). Retrieved February 28, 2021, from https://www.fincen.gov/reports/sar-stats
+- Bureau, U. (2019, December 30). State population Totals: 2010-2019. Retrieved February 28, 2021, from https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html#par_textimage_1574439295
+- Khandelwal, R. (2020, December 07). Evaluating goodness of clustering for unsupervised learning case. Retrieved February 28, 2021, from https://towardsdatascience.com/evaluating-goodness-of-clustering-for-unsupervised-learning-case-ccebcfd1d4f1

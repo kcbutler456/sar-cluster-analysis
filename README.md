@@ -53,7 +53,16 @@ sar[is.na(sar)] = 0
 sar <- data.frame(sar)
 ```
 
-## EDA and Feature Selection
+## Exploratory Data Analysis and Feature Selection
+
+Insurance 
+
+```html
+cor(sar[2:7]) 
+```
+
+![image](https://user-images.githubusercontent.com/55027593/109433405-caa8ff00-79d5-11eb-85dd-6184c297b47b.png)
+
 
 ## Optimial K Cluster Selection
 

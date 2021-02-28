@@ -28,7 +28,24 @@ Six files were generated for each suspicious activity type in depository institu
 ## Data Cleaning and Prepartion 
 
 - Remove aggrigated columns and Guam territory
-```html msb <- msb[msb$State != "[Total]"&msb$State!="Guam",] #remove aggregated rows```
+```html
+msb <- msb[msb$State != "[Total]"&msb$State!="Guam",]
+```
+- Aggregate count to suspicious activity type and state, and calculate per capita statistic
+```html
+sar <- group_by(msb,State, Type) %>%
+  summarise(sum = sum(Count))
+sar <- merge(sar, pop, by = "State", all.x = TRUE)
+sar$capita <- (sar$sum/sar$Population)*1000
+sar$sum <- NULL
+sar$Population <- NULL
+```
+- Pivot the data for analysis and replace null values with 0
+```html
+sar <-  data.frame(pivot_wider(sar, names_from = c(Type), values_from = capita))
+sar[is.na(sar)] = 0
+sar <- data.frame(sar)
+```
 
 ## EDA and Feature Selection
 

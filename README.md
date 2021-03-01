@@ -125,6 +125,16 @@ fviz_silhouette(sil)
 ![image](https://user-images.githubusercontent.com/55027593/109572521-fbab3180-7ab2-11eb-8b1b-51c8d5fd6782.png)
 
 
+```html
+hc.res <- eclust(sar[,2:8], "hclust", k = 3, hc_metric = "euclidean", 
+                 hc_method = "ward.D2", graph = FALSE)
+fviz_dend(hc.res, show_labels = FALSE,
+          palette = "jco", as.ggplot = TRUE)
+```
+
+![image](https://user-images.githubusercontent.com/55027593/109572821-81c77800-7ab3-11eb-82db-78cb11a16fa2.png)
+
+
 
 ## Results and Conclusion
 

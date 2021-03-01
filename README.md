@@ -75,9 +75,9 @@ fviz_nbclust(sar[2:8], kmeans, method = "wss") +
 ```
 ![image](https://user-images.githubusercontent.com/55027593/109571048-ac640180-7ab0-11eb-900b-87bee7f3c572.png)
 
-## Clustering 
+## Clustering and evaluating goodness of cluster
 
-Compare 2 and 3 clusters
+Based on the results from the "elbow" method of determining the best number of clusters, I wanted to compare how the k-means algorithm does with two and three clusters. After analyzing the results (presented below), I decided to continue with three clusters for analysis. Additionally, I scanned the results from the hierachical clustering method. It produced similar results. 
 
 ```html
 km2 <- kmeans(sar[2:8], 2, nstart = 25)
@@ -87,9 +87,18 @@ fviz_cluster(km2, data = sar[2:8],
              ellipse.type = "convex", 
              ggtheme = theme_bw())
 ```
-![image](https://user-images.githubusercontent.com/55027593/109433995-c16d6180-79d8-11eb-9792-307ba873f337.png)
+![image](https://user-images.githubusercontent.com/55027593/109572140-585a1c80-7ab2-11eb-83b5-3bc63dd66b6e.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109433980-b1558200-79d8-11eb-86a5-c8168d9bec02.png)
+![image](https://user-images.githubusercontent.com/55027593/109572170-65770b80-7ab2-11eb-9f79-cd7d6e6bd13e.png)
+
+```html
+sil <- silhouette(km2$cluster, dist(sar[2:8]))
+fviz_silhouette(sil)
+
+```
+![image](https://user-images.githubusercontent.com/55027593/109572233-7c1d6280-7ab2-11eb-83ab-28a3c3a3d925.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109572267-88092480-7ab2-11eb-9816-170a029adc2d.png)
 
 
 ```html
@@ -105,17 +114,6 @@ fviz_cluster(km3, data = sar[2:8],
 ![image](https://user-images.githubusercontent.com/55027593/109434019-d77b2200-79d8-11eb-9e08-c67750b17917.png)
 
 
-##Evaluate goodness of clusters
-
-
-```html
-sil <- silhouette(km2$cluster, dist(sar[2:8]))
-fviz_silhouette(sil)
-
-```
-![image](https://user-images.githubusercontent.com/55027593/109434062-02fe0c80-79d9-11eb-96fa-7ebd79159321.png)
-
-![image](https://user-images.githubusercontent.com/55027593/109434066-06919380-79d9-11eb-9148-2bb1abb3050b.png)
 
 ```html
 sil <- silhouette(km3$cluster, dist(sar[2:8]))
@@ -126,7 +124,11 @@ fviz_silhouette(sil)
 ![image](https://user-images.githubusercontent.com/55027593/109434076-0f826500-79d9-11eb-92b2-b66aa49e72b5.png)
 
 
+
+
 ## Results and Conclusion
+
+
 ## References
 
 - Kenton, W. (2020, September 09). Suspicious activity report (sar) definition. Retrieved February 28, 2021, from https://www.investopedia.com/terms/s/suspicious-activity-report.asp

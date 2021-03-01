@@ -20,14 +20,14 @@ This is an unsupervised machine learning task which will utilize k-means and hie
 
 ## Data Collection
 
-Seven files were generated for each suspicious activity type in depository institutions for deposit accounts in 2020; Cyber event, gaming activities, identification documnetation, money laundering, mortgage fraud, terrorist financing, and structuring. 3,460,668 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the unioned supsicious activity file to generate per capita statistics. The below visualizations shows the distribution of the raw activity per capita. This starts to highlight overall SAR filing activities across the United States. 
+Seven files were generated for each suspicious activity type in depository institutions for deposit accounts in 2020; Cyber event, gaming activities, identification documnetation, money laundering, mortgage fraud, terrorist financing, and structuring. 3,460,668 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the unioned supsicious activity file to generate per capita statistics. The below visualizations shows the distribution of the raw activity per capita. This starts to highlight overall SAR filing activities across the United States. I excluded Delaware from the visualization due to it being an extreme outlier. 
 
 <div class='tableauPlaceholder' id='viz1614638548488' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuspiciousActivityperCapita&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SuspiciousActivityperCapita&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuspiciousActivityperCapita&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>           
           
 
 ## Data Cleaning and Prepartion 
 
-- Remove irrelevant, reaggregated columns, and Guam territory
+- Remove irrelevant, preaggregated columns, and Guam territory
 ```html
 msb$Year.Month <- NULL
 msb$State <- as.factor(msb$State)
@@ -53,15 +53,18 @@ sar[is.na(sar)] = 0
 sar <- data.frame(sar)
 ```
 
-## Exploratory Data Analysis and Feature Selection
+## Exploratory Data Analysis
 
-Insurance 
+A correlation matrix was used to examine the relationship among variables before analysis. 
 
 ```html
 cor(sar[2:8]) 
 ```
 
 ![image](https://user-images.githubusercontent.com/55027593/109433930-676c9c00-79d8-11eb-8dd2-1afe6ad9437e.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109570157-39a65680-7aaf-11eb-8ca0-4ee13ea22622.png)
+
 
 ## Optimial K Cluster Selection
 

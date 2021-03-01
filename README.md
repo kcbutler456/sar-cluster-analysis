@@ -61,9 +61,9 @@ A correlation matrix was used to examine the relationship among variables before
 cor(sar[2:8]) 
 ```
 
-![image](https://user-images.githubusercontent.com/55027593/109433930-676c9c00-79d8-11eb-8dd2-1afe6ad9437e.png)
+![image](https://user-images.githubusercontent.com/55027593/109570774-3d86a880-7ab0-11eb-91cb-d99e6798f16a.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109570157-39a65680-7aaf-11eb-8ca0-4ee13ea22622.png)
+![image](https://user-images.githubusercontent.com/55027593/109570868-61e28500-7ab0-11eb-9320-97ab0f22ae3e.png)
 
 
 ## Optimial K Cluster Selection
@@ -73,7 +73,7 @@ fviz_nbclust(sar[2:8], kmeans, method = "wss") +
   geom_vline(xintercept = 3, linetype = 2)+
   labs(subtitle = "Elbow method") #3 clusters
 ```
-![image](https://user-images.githubusercontent.com/55027593/109433959-8e2ad280-79d8-11eb-926c-f55a7d74d90f.png)
+![image](https://user-images.githubusercontent.com/55027593/109571048-ac640180-7ab0-11eb-900b-87bee7f3c572.png)
 
 ## Clustering 
 
@@ -100,7 +100,7 @@ fviz_cluster(km3, data = sar[2:8],
              ellipse.type = "convex", 
              ggtheme = theme_bw())
 ```
-![image](https://user-images.githubusercontent.com/55027593/109434012-cf22e700-79d8-11eb-8efd-18ccbb9e6569.png)
+
 
 ![image](https://user-images.githubusercontent.com/55027593/109434019-d77b2200-79d8-11eb-9e08-c67750b17917.png)
 

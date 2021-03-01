@@ -111,18 +111,18 @@ fviz_cluster(km3, data = sar[2:8],
 ```
 
 
-![image](https://user-images.githubusercontent.com/55027593/109434019-d77b2200-79d8-11eb-9e08-c67750b17917.png)
+![image](https://user-images.githubusercontent.com/55027593/109572406-c43c8500-7ab2-11eb-8721-0ddcf74b46c2.png)
 
+![image](https://user-images.githubusercontent.com/55027593/109572436-cd2d5680-7ab2-11eb-85b9-8b2e7538eb30.png)
 
 
 ```html
 sil <- silhouette(km3$cluster, dist(sar[2:8]))
 fviz_silhouette(sil)
 ```
-![image](https://user-images.githubusercontent.com/55027593/109434086-1e691780-79d9-11eb-9861-631973f6090d.png)
+![image](https://user-images.githubusercontent.com/55027593/109572470-dcac9f80-7ab2-11eb-9667-c809d4337f89.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109434076-0f826500-79d9-11eb-92b2-b66aa49e72b5.png)
-
+![image](https://user-images.githubusercontent.com/55027593/109572521-fbab3180-7ab2-11eb-8b1b-51c8d5fd6782.png)
 
 
 

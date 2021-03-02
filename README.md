@@ -169,6 +169,10 @@ looking at the other two clusters, we can start to uncover an interesting filing
 
 ![image](https://user-images.githubusercontent.com/55027593/109723421-adaa3280-7b73-11eb-87d3-f7135c9821e3.png)
 
+![image](https://user-images.githubusercontent.com/55027593/109723700-1396ba00-7b74-11eb-8995-bdf94e2a4220.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109723829-42149500-7b74-11eb-8dd8-c5192bd89128.png)
+
 
 ## References
 

@@ -4,7 +4,7 @@ Suspicious Activity Reports (SAR) are reports which financial instructions are r
 
 This project seeks to identify natural clusters in the public SAR filing data located on the Financial Crimes Enforcement Network (FinCEN) government website. This data includes aggregated totals of SARs filed by month, year, industry type, suspicious activity, state, instrument type, relationship, and regulator. As a result of the project, I'm hoping to identify specific groups or patterns in the data that highlight not only interesting criminal behavior but also potentially identify interesting SAR filing behavior. 
 
-This is an unsupervised machine learning task which will utilize k-means and hierarchical clustering algorithms and compare the results. Suspicious activity categories including cyber event, gaming activities, identification documentation, money laundering, mortgage fraud, terrorist financing, and structuring will be used to cluster states across the nation (excluding territories). Due to the volume of the data and in an effort to maximize insight, this analysis will be limited to SAR activity filed in depository institutions and their deposit accounts in 2020. Therefore, the research question breaks down to, "what states exhibit similar suspicious activity for depository institutions in deposit accounts for 2020?".
+This is an unsupervised machine learning task which will utilize k-means and hierarchical clustering algorithms and compare the results. Suspicious activity categories including cyber event, gaming activities, identification documentation, money laundering, mortgage fraud, terrorist financing, and structuring will be used to cluster states across the nation (excluding territories). Due to the volume of the data and to maximize insight, this analysis will be limited to SAR activity filed in depository institutions and their deposit accounts in 2020. Therefore, the research question breaks down to, "what states exhibit similar suspicious activity for depository institutions in deposit accounts for 2020?".
 
 ## Tools and Resources
 
@@ -18,14 +18,14 @@ This is an unsupervised machine learning task which will utilize k-means and hie
 
 ## Data Collection
 
-Seven files were generated, due to the parameter restrictions on the website, for each suspicious activity type in depository institutions for deposit accounts in 2020; Cyber event, gaming activities, identification documnetation, money laundering, mortgage fraud, terrorist financing, and structuring. 3,460,668 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the unioned supsicious activity file to generate per capita statistics. The below visualizations shows the distribution of the raw activity per capita. This starts to highlight overall SAR filing activities across the United States. I excluded Delaware from this visualization only due to it being an extreme outlier. 
+Seven files were generated, due to the parameter restrictions on the website, for each suspicious activity type in depository institutions for deposit accounts in 2020: Cyber event, gaming activities, identification documentation, money laundering, mortgage fraud, terrorist financing, and structuring. 3,460,668 suspicious activity observations were collected for each state (excluding territories). United states populations statistics were then joined to the union suspicious activity file to generate per capita statistics. The below visualizations show the distribution of the raw activity per capita. This starts to highlight overall SAR filing activities across the United States. I excluded Delaware from this visualization only due to it being an extreme outlier. 
 
 <div class='tableauPlaceholder' id='viz1614638548488' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuspiciousActivityperCapita&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SuspiciousActivityperCapita&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SuspiciousActivityperCapita&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>           
           
 
-## Data Cleaning and Prepartion 
+## Data Cleaning and Preparation 
 
-- Remove irrelevant, preaggregated columns, and Guam territory
+- Remove irrelevant, pre-aggregated columns, and Guam territory
 ```html
 msb$Year.Month <- NULL
 msb$State <- as.factor(msb$State)
@@ -64,7 +64,7 @@ cor(sar[2:8])
 ![image](https://user-images.githubusercontent.com/55027593/109570868-61e28500-7ab0-11eb-9320-97ab0f22ae3e.png)
 
 
-## Optimial K Cluster Selection
+## Optimal K Cluster Selection
 
 ```html
 fviz_nbclust(sar[2:8], kmeans, method = "wss") +
@@ -75,7 +75,7 @@ fviz_nbclust(sar[2:8], kmeans, method = "wss") +
 
 ## Clustering and evaluating goodness of cluster
 
-Based on the results from the "elbow" method of determining the best number of clusters, I wanted to compare how the k-means algorithm does with two and three clusters. After analyzing the results (presented below), I decided to continue with three clusters for analysis. Additionally, I scanned the results from the hierachical clustering method. It produced similar results. 
+Based on the results from the "elbow" method of determining the best number of clusters, I wanted to compare how the k-means algorithm does with two and three clusters. After analyzing the results (presented below), I decided to continue with three clusters for analysis. Additionally, I scanned the results from the hierarchical clustering method. It produced similar results. 
 
 ```html
 km2 <- kmeans(sar[2:8], 2, nstart = 25)
@@ -159,7 +159,9 @@ fviz_dend(hc.res, show_labels = FALSE,
 ## Results and Conclusion
 
 <div class='tableauPlaceholder' id='viz1614709400065' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SARClusterAnalysis&#47;SARClusterAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>               
+*Interactive dashboard: https://public.tableau.com/profile/kristina.butler8425#!/vizhome/SARClusterAnalysis/SARClusterAnalysis*
 
+The k-means clustering algorithm successfully found three distinct clusters of states across the United States based on per capita statistic in 2020 for Depository Institutions and their deposit accounts. The obvious and most glaring cluster is cluster 3 and only contains one state: Delaware. Upon investigation, I found Delaware is quite known for their business or corporate conducive environment. It is attractive to business owners due to its business friendly usury laws and light taxation (Tarver, 2021). In fact, before 2017, there were more business registered in Delaware than the total population (Bartels, 2019). 
 
 ## References
 
@@ -169,3 +171,5 @@ fviz_dend(hc.res, show_labels = FALSE,
 - SAR stats. (n.d.). Retrieved February 28, 2021, from https://www.fincen.gov/reports/sar-stats
 - Bureau, U. (2019, December 30). State population Totals: 2010-2019. Retrieved February 28, 2021, from https://www.census.gov/data/tables/time-series/demo/popest/2010s-state-total.html#par_textimage_1574439295
 - Khandelwal, R. (2020, December 07). Evaluating goodness of clustering for unsupervised learning case. Retrieved February 28, 2021, from https://towardsdatascience.com/evaluating-goodness-of-clustering-for-unsupervised-learning-case-ccebcfd1d4f1
+- Tarver, E. (2021, January 01). Why Delaware is considered a tax shelter. Retrieved March 02, 2021, from https://www.investopedia.com/articles/personal-finance/092515/4-reasons-why-delaware-considered-tax-shelter.asp
+- Bartels, J. (2019, April 06). Discreet Delaware: Why corporate secrecy and money LAUNDERING have thrived in the US. Retrieved March 02, 2021, from https://www.biia.com/discreet-delaware-why-corporate-secrecy-and-money-laundering-have-thrived-in-the-us

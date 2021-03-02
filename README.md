@@ -123,6 +123,28 @@ fviz_silhouette(sil)
 ![image](https://user-images.githubusercontent.com/55027593/109572521-fbab3180-7ab2-11eb-8b1b-51c8d5fd6782.png)
 
 
+
+```html
+km4 <- kmeans(sar[2:8], 4, nstart = 25)
+print(km4)
+fviz_cluster(km4, data = sar[2:8],
+             geom = "point",
+             ellipse.type = "convex", 
+             ggtheme = theme_bw())
+```
+![image](https://user-images.githubusercontent.com/55027593/109668495-da8c2480-7b36-11eb-8fb9-8b4d8f955c58.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109668280-a284e180-7b36-11eb-9ea1-f6ee308ff365.png)
+
+```html
+sil <- silhouette(km4$cluster, dist(sar[2:8]))
+fviz_silhouette(sil)
+```
+![image](https://user-images.githubusercontent.com/55027593/109668722-0c9d8680-7b37-11eb-9df8-526e7e0db80a.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109668756-145d2b00-7b37-11eb-8abf-875acfe8d0bc.png)
+
+
 ```html
 hc.res <- eclust(sar[,2:8], "hclust", k = 3, hc_metric = "euclidean", 
                  hc_method = "ward.D2", graph = FALSE)

@@ -160,20 +160,27 @@ fviz_dend(hc.res, show_labels = FALSE,
 
 ## Results and Conclusion
 
+The k-means clustering algorithm successfully found three distinct clusters of states across the United States based on per capita statistic in 2020 for Depository Institutions and their deposit accounts.
+
 <div class='tableauPlaceholder' id='viz1614709400065' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SARClusterAnalysis&#47;SARClusterAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>               
 *Interactive dashboard: https://public.tableau.com/profile/kristina.butler8425#!/vizhome/SARClusterAnalysis/SARClusterAnalysis*
 
-The k-means clustering algorithm successfully found three distinct clusters of states across the United States based on per capita statistic in 2020 for Depository Institutions and their deposit accounts. The obvious and most glaring cluster is cluster 3 and only contains one state: Delaware. Upon investigation, I found Delaware is quite known for their business or corporate conducive environment. It is attractive to business owners due to its business friendly usury laws and light taxation (Tarver, 2021). In fact, before 2017, there were more business registered in Delaware than the total population (Bartels, 2019). Additionally and more importantly, this state has local laws in place that allow private businesses to protect the identity of their owners (Tarver, 2021). In other words, businesses in Delaware are able to hide the true beneficiary owner for the company. This is a major issue when it comes to anti-money laundering efforts. For example, if a financial institution does not know who the beneficiary owner is of the company, it makes it harder to determine legitamate operations from shell companies. This allows criminal easier access to launder money in the financial system. From the chart below, we can see Delaware has significant SAR filing data in money laundering, identification documentation, and gaming activities.  
+![image](https://user-images.githubusercontent.com/55027593/109723829-42149500-7b74-11eb-8dd8-c5192bd89128.png)
+
+![image](https://user-images.githubusercontent.com/55027593/109820900-0ec91900-7bfb-11eb-87d1-7f196d957026.png)
+
+
+The obvious and most glaring cluster is cluster 3 and only contains one state: Delaware. Upon investigation, I found Delaware is quite known for their business or corporate conducive environment. It is attractive to business owners due to its business friendly usury laws and light taxation (Tarver, 2021). In fact, before 2017, there were more business registered in Delaware than the total population (Bartels, 2019). Additionally and more importantly, this state has local laws in place that allow private businesses to protect the identity of their owners (Tarver, 2021). In other words, businesses in Delaware are able to hide the true beneficiary owner for the company. This is a major issue when it comes to anti-money laundering efforts. For example, if a financial institution does not know who the beneficiary owner is of the company, it makes it harder to determine legitamate operations from shell companies. This allows criminal easier access to launder money in the financial system. From the chart below, we can see Delaware has significant SAR filing data in money laundering, identification documentation, and gaming activities.  
 
 ![image](https://user-images.githubusercontent.com/55027593/109720061-34a8dc00-7b6f-11eb-9bc2-249ca59f2277.png)
 
-looking at the other two clusters, we can start to uncover an interesting filing trend. Cluster 1, overall, seems to have more filing activity making them the higher suspicious activity filing per capita cluster. Additionally, these states usually have a peak in one area of suspicious activity. Cluster 2 can be considered the lower suspicious acivity filing per capita cluster. Based on what we learned in cluster 3 (Delaware) about beneficial owneship, we can start to really see how the laws in each state influence these trends. For example, Texas, Florida, Califorina, Nevada and south Dakota (to name a few), also have laws in place 
+looking at the other two clusters, we can start to uncover an interesting filing trend. Cluster 1, overall, seems to have more filing activity making them the higher suspicious activity filing per capita cluster. Additionally, these states usually have a peak in one area of suspicious activity. Cluster 2 can be considered the lower suspicious acivity filing per capita cluster with the majority of the data falling within expected criminal and SAR filing behavior range. Based on what we learned in cluster 3 (Delaware) about beneficial owneship, we can start to really see how the laws in each state influence these trends. For example, Texas, Florida, Califorina, Nevada and south Dakota (to name a few), also have laws in place 
 
 ![image](https://user-images.githubusercontent.com/55027593/109723421-adaa3280-7b73-11eb-87d3-f7135c9821e3.png)
 
 ![image](https://user-images.githubusercontent.com/55027593/109723700-1396ba00-7b74-11eb-8995-bdf94e2a4220.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109723829-42149500-7b74-11eb-8dd8-c5192bd89128.png)
+
 
 
 ## Future Projects

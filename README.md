@@ -66,6 +66,8 @@ cor(sar[2:8])
 
 ## Optimal K Cluster Selection
 
+I started the machine learning phase by identifying the optimal number of clusters for analysis. I used the elbow method as they call it. It searches for the optimal number of clusters by minimizing the total within-cluster sum of squares or compactness. 
+
 ```html
 fviz_nbclust(sar[2:8], kmeans, method = "wss") +
   geom_vline(xintercept = 3, linetype = 2)+

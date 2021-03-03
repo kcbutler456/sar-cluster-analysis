@@ -173,12 +173,9 @@ The obvious and most glaring cluster is cluster 3 and only contains one state: D
 
 ![image](https://user-images.githubusercontent.com/55027593/109720061-34a8dc00-7b6f-11eb-9bc2-249ca59f2277.png)
 
-looking at the other two clusters, we can start to uncover an interesting filing trend. Cluster 1, overall, seems to have more filing activity making them the higher suspicious activity filing per capita cluster. Additionally, these states usually have a peak in one area of suspicious activity. Cluster 2 can be considered the lower suspicious acivity filing per capita cluster with the majority of the data falling within expected criminal and SAR filing behavior range. Based on what we learned in cluster 3 (Delaware) about beneficial owneship, we can start to really see how the laws in each state influence these trends. For example, Texas, Florida, Califorina, Nevada and south Dakota (to name a few), also have laws in place 
+looking at the other two clusters, we can start to uncover an interesting filing trend. Cluster 1, overall, seems to have more filing activity making them the higher suspicious activity filing per capita cluster. Additionally, these states usually have a peak in one area of suspicious activity. Cluster 2 can be considered the lower suspicious acivity filing per capita cluster with the majority of the data falling within expected criminal and SAR filing behavior range with the exception of Alaska and Gaming Activities. Based on what we learned in cluster 3 (Delaware) about beneficial owneship and the laws that exist in Delaware, we can start to see how the laws might be playing a role in the type of activity that is filed in cluster 2. Additionally, we can start to uncover patters in the type of crimes distributed across the United States. For example, South Dakota is significantly higher in terrorist financing, North Carolina in mortgage fraud, and Ohio in cyber event activity. 
 
-![image](https://user-images.githubusercontent.com/55027593/109723421-adaa3280-7b73-11eb-87d3-f7135c9821e3.png)
-
-![image](https://user-images.githubusercontent.com/55027593/109723700-1396ba00-7b74-11eb-8995-bdf94e2a4220.png)
-
+![image](https://user-images.githubusercontent.com/55027593/109821813-f9a0ba00-7bfb-11eb-98a2-40927e0a5d9a.png) ![image](https://user-images.githubusercontent.com/55027593/109821832-fe656e00-7bfb-11eb-95a4-4e05306660be.png)
 
 
 

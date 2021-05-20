@@ -72,7 +72,7 @@ fviz_nbclust(sar[2:8], kmeans, method = "wss") +
   geom_vline(xintercept = 3, linetype = 2)+
   labs(subtitle = "Elbow method") #3 clusters
 ```
-![image](https://user-images.githubusercontent.com/55027593/109571048-ac640180-7ab0-11eb-900b-87bee7f3c572.png)
+![image](https://user-images.githubusercontent.com/55027593/119052475-4342aa80-b98a-11eb-8a67-37dbeba5b755.png)
 
 ## Clustering and evaluating goodness of cluster
 
@@ -86,19 +86,19 @@ fviz_cluster(km2, data = sar[2:8],
              ellipse.type = "convex", 
              ggtheme = theme_bw())
 ```
-![image](https://user-images.githubusercontent.com/55027593/109572140-585a1c80-7ab2-11eb-83b5-3bc63dd66b6e.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109572170-65770b80-7ab2-11eb-9f79-cd7d6e6bd13e.png)
+![image](https://user-images.githubusercontent.com/55027593/119052788-be0bc580-b98a-11eb-94e4-efa20f348134.png)
+
+![image](https://user-images.githubusercontent.com/55027593/119052536-5a819800-b98a-11eb-9c9b-4eb8851825b9.png)
 
 ```html
 sil <- silhouette(km2$cluster, dist(sar[2:8]))
 fviz_silhouette(sil)
 
 ```
-![image](https://user-images.githubusercontent.com/55027593/109572233-7c1d6280-7ab2-11eb-83ab-28a3c3a3d925.png)
+![image](https://user-images.githubusercontent.com/55027593/119053211-5d30bd00-b98b-11eb-8cca-ab504414f714.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109572267-88092480-7ab2-11eb-9816-170a029adc2d.png)
-
+![image](https://user-images.githubusercontent.com/55027593/119053127-3e322b00-b98b-11eb-898a-ccb56a702248.png)
 
 ```html
 km3 <- kmeans(sar[2:8], 3, nstart = 25)
@@ -110,7 +110,7 @@ fviz_cluster(km3, data = sar[2:8],
 ```
 
 
-![image](https://user-images.githubusercontent.com/55027593/109572406-c43c8500-7ab2-11eb-8721-0ddcf74b46c2.png)
+![image](https://user-images.githubusercontent.com/55027593/119053377-99fcb400-b98b-11eb-9aea-73e1130efc7a.png)
 
 ![image](https://user-images.githubusercontent.com/55027593/109572436-cd2d5680-7ab2-11eb-85b9-8b2e7538eb30.png)
 
@@ -119,9 +119,9 @@ fviz_cluster(km3, data = sar[2:8],
 sil <- silhouette(km3$cluster, dist(sar[2:8]))
 fviz_silhouette(sil)
 ```
-![image](https://user-images.githubusercontent.com/55027593/109572470-dcac9f80-7ab2-11eb-9667-c809d4337f89.png)
+![image](https://user-images.githubusercontent.com/55027593/119053445-b13ba180-b98b-11eb-9ea1-753b7aaefeac.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109572521-fbab3180-7ab2-11eb-8b1b-51c8d5fd6782.png)
+![image](https://user-images.githubusercontent.com/55027593/119053485-bbf63680-b98b-11eb-9dde-f6add37f462d.png)
 
 
 
@@ -133,17 +133,17 @@ fviz_cluster(km4, data = sar[2:8],
              ellipse.type = "convex", 
              ggtheme = theme_bw())
 ```
-![image](https://user-images.githubusercontent.com/55027593/109668495-da8c2480-7b36-11eb-8fb9-8b4d8f955c58.png)
+![image](https://user-images.githubusercontent.com/55027593/119053575-ddefb900-b98b-11eb-8de2-440c6617a1f4.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109668280-a284e180-7b36-11eb-9ea1-f6ee308ff365.png)
+![image](https://user-images.githubusercontent.com/55027593/119053612-ee079880-b98b-11eb-8fe2-cb7b80e2ab70.png)
 
 ```html
 sil <- silhouette(km4$cluster, dist(sar[2:8]))
 fviz_silhouette(sil)
 ```
-![image](https://user-images.githubusercontent.com/55027593/109668722-0c9d8680-7b37-11eb-9df8-526e7e0db80a.png)
+![image](https://user-images.githubusercontent.com/55027593/119053681-04adef80-b98c-11eb-932c-96f490edde47.png)
 
-![image](https://user-images.githubusercontent.com/55027593/109668756-145d2b00-7b37-11eb-8abf-875acfe8d0bc.png)
+![image](https://user-images.githubusercontent.com/55027593/119053719-1394a200-b98c-11eb-94aa-80be84a66de6.png)
 
 
 ```html

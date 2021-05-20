@@ -163,7 +163,7 @@ The k-means clustering algorithm successfully found three distinct clusters of s
 
 ** Interactive dashboard: https://public.tableau.com/profile/kristina.butler8425#!/vizhome/SARClusterAnalysis/SARClusterAnalysis
 
-
+<div class='tableauPlaceholder' id='viz1621546810393' style='position: relative'><noscript><a href='#'><img alt='SAR Cluster Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SARClusterAnalysis&#47;SARClusterAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SA&#47;SARClusterAnalysis&#47;SARClusterAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>  
 
 ![image](https://user-images.githubusercontent.com/55027593/119052277-f9f25b00-b989-11eb-9669-ffe0be6bf188.png)
 
